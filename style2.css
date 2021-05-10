@@ -1,0 +1,218 @@
+:root {
+  --blue: #00a7ff;
+  --lightBlue: #e5f3ff;
+  --darkBlue: #003164;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+.wrapper {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin: 0 auto;
+  width: 935px;
+  height: 700px;
+  /* width: 100vw;
+    height: 100vh; */
+  display: flex;
+  overflow: hidden;
+}
+main {
+  width: 65vw;
+  height: 100vh;
+  background-color: var(--lightBlue);
+  padding: 90px 60px;
+  position: relative;
+}
+
+/* 任務輸入 */
+.addMission {
+  width: 330px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+}
+.addMission input {
+  width: 305px;
+  height: 40px;
+  background-color: #fff;
+  padding: 5px 10px;
+  box-sizing: border-box;
+
+  outline: none;
+  border: none;
+}
+.addMission ::-webkit-input-placeholder {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--blue);
+}
+.addMission a {
+  line-height: 40px;
+}
+.fa-plus {
+  width: 15px;
+  color: var(--blue);
+  font-weight: 100;
+}
+
+/* 第一件事情 */
+.toDo {
+  margin-top: 100px;
+  display: flex;
+  color: var(--darkBlue);
+}
+.dot {
+  display: block;
+  background-color: transparent;
+  border: 1px solid var(--darkBlue);
+  border-radius: 50%;
+}
+.bigSize {
+  width: 36px;
+  height: 36px;
+}
+.missionOne {
+  margin-left: 12px;
+  align-self: center;
+}
+.missionOne p {
+  font-size: 1.3rem;
+}
+.decLine {
+  display: block;
+  width: 72px;
+  height: 5px;
+  border-bottom: 8px dotted var(--darkBlue);
+}
+
+/* 計時器 */
+.counting {
+  font-size: 7.5rem;
+  color: var(--blue);
+  margin: 30px auto 100px;
+}
+
+/* 其他代辦事項 */
+.list li {
+  color: var(--darkBlue);
+  display: flex;
+  width: 330px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 10px;
+
+  border-bottom: 1px solid #d9e9f7;
+}
+.item {
+  display: flex;
+}
+.item p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3rem;
+}
+.midSize {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.fa-play-circle-o {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+/* MORE */
+.list li:last-child {
+  color: var(--blue);
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+/* circle */
+
+.circleBtn {
+  background-color: transparent;
+  position: absolute;
+  top: calc((700px - 395px) / 2);
+  right: -197px;
+}
+
+.circleOutline {
+  display: block;
+  width: 395px;
+  height: 395px;
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.circle {
+  display: block;
+  width: 380px;
+  height: 380px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 7.5px auto 0;
+}
+
+.fa-pause-circle {
+  color: var(--blue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+}
+.smallDot {
+  background-color: var(--blue);
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  top: 218px;
+  left: 238px;
+}
+
+/* 側邊攔 */
+
+nav {
+  background-color: var(--darkBlue);
+  width: 35vw;
+  height: 700px;
+  box-sizing: border-box;
+  /* padding: 90px 60px; */
+  position: relative;
+  z-index: -1;
+}
+.navList {
+  margin-top: 90px;
+  margin-left: 200px;
+}
+.navList li {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.fa-list,
+.fa-bar-chart,
+.fa-music {
+  font-size: 20px;
+}
+.name {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  transform: rotate(90deg);
+  /* box-sizing: border-box; */
+  /* padding-bottom: 150px;
+    padding-left: 290px;
+    box-sizing: border-box; */
+  position: absolute;
+  bottom: 120px;
+  right: 18px;
+}

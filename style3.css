@@ -1,0 +1,259 @@
+:root {
+    --blue: #00a7ff;
+    --lightBlue: #e5f3ff;
+    --darkBlue: #003164;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+.wrapper{
+    font-family: "Roboto", sans-serif;
+    display: block;
+    margin: 0 auto;
+    width: 935px;
+    height: 700px;
+    background-color: var(--darkBlue);
+
+    position: relative;
+    overflow: hidden;
+    padding: 55px 70px;
+    box-sizing: border-box;
+}
+
+/* 關閉按鈕 */
+.closeBtn{
+    position: absolute;
+    top: 75px;
+    right: 50px;
+}
+.closeBtn span{
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: relative;
+}
+.closeBtn span::before,.closeBtn span::after{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.closeBtn span::before{
+    transform: rotate(45deg);
+}
+.closeBtn span::after{
+    transform: rotate(-45deg);
+}
+
+/* PROMODORO 商標*/
+.name{
+    position: absolute;
+    right: -10px;
+    bottom: 130px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/* timer */
+.timer{
+    width: 315px;
+    height: 315px;
+    background-color: var(--lightBlue);
+    border-radius: 50%;
+    
+    position: absolute;
+    bottom: -157.5px;
+    left: 35px;
+}
+.counting{
+    /* outline: 1px solid red; */
+    position: relative;
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    text-align: center;
+}
+.circleBtn{
+    position: absolute;
+    top: -45px;
+    left: calc((315px - 105px)/2);
+    width: 105px;
+    height: 105px;
+    background-color: var(--darkBlue);
+    border-radius: 50%;
+}
+.circleOutline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 90px;
+    border:2px solid var(--blue);
+    border-radius: 50%;
+}
+.fa-play-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--blue);
+    border-radius: 50%;
+    font-size: 5.625rem;
+}
+.fa-play-circle::after{
+    /* 補icon 背景底部白色 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.num{
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: var(--blue);
+    padding-top: 65px;
+}
+.counting p{
+    color: var(--darkBlue);
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.main{
+    display: flex;
+}
+/* 第一列選單 */
+
+.nav li{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+
+    transition: all .6s;
+}
+.nav i{
+    margin-right: 8px;
+}
+
+.nav li:hover{
+    color: rgba(255, 255, 255);
+}
+.nav li:hover i{
+    color: var(--blue);
+}
+
+/* 第二列選單 */
+
+.rightSide_list{
+    margin-left: 175px;
+}
+
+/* 任務輸入 */
+.addMission {
+    width: 330px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+
+    margin-bottom: 40px;
+}
+.addMission input {
+    width: 305px;
+    height: 40px;
+    background-color: #fff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+}
+.addMission ::-webkit-input-placeholder {
+    font-weight: 700;
+    font-style: italic;
+    color: var(--blue);
+}
+.addMission a {
+    line-height: 40px;
+}
+.fa-plus {
+    width: 15px;
+    color: var(--blue);
+    font-weight: 100;
+}
+.to-do-title,.done-title{
+    display: flex;
+    width: 330px;
+    height: 30px;
+    background-color: #335a8393;
+    color:#fff;
+    padding: 0 10px;
+    line-height: 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.fa-caret-up,.fa-caret-down{
+    line-height: 30px;
+}
+
+.to-do-list{
+    margin-bottom: 40px;
+}
+
+/* 代辦事項 */
+.item {
+    display: flex;
+}
+.dot {
+    display: block;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.to-do-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #d9e9f7;
+}
+.item {
+    display: flex;
+}
+.item p {
+    font-size: 0.8rem;
+    font-weight: normal;
+    line-height: 1.3rem;
+    color: #fff;
+    /* letter-spacing: 2px; */
+}
+.midSize {
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.fa-play-circle-o {
+    font-size: 15px;
+    font-weight: 100;
+    color: #fff;
+}
