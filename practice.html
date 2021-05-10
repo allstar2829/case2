@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+    ></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wraper">
+      <main>
+        <div class="addMission">
+          <input type="text" placeholder="ADD A NEW MISSION..." />
+          <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="toDo">
+          <div class="dot bigSize"></div>
+          <div class="missionOne">
+            <p>THE FIRST THING TO DO TODAY</p>
+            <div class="decLine"></div>
+          </div>
+        </div>
+
+        <div class="counting">05:00</div>
+
+        <div class="list">
+            <ul>
+                <li> 
+                  <div class="item">
+                    <div class="dot midSize"></div> 
+                    <p>THE SECOND THING TO DO TODAY </p>
+                  </div>
+                  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </li>
+                <li> 
+                  <div class="item">
+                    <div class="dot midSize"></div> 
+                    <p>THE THIRD THING TO DO TODAY </p>
+                  </div>
+                  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </li>
+                <li> 
+                  <div class="item">
+                    <div class="dot midSize"></div> 
+                    <p>THE FOURTH THING TO DO TODAY </p>
+                  </div>
+                  <i class="fa fa-play-circle-o small" aria-hidden="true"></i>
+                </li>
+                <li> MORE </li>
+            </ul>
+        </div>
+
+        <div class="circleBtn">
+            <div class="circleOutline">
+              <div class="circle">
+                <i class="fa fa-play-circle" aria-hidden="true"></i>
+                <div class="smallDot"></div>
+              </div>
+            </div>
+        </div>
+
+      </main>
+
+      <nav>
+        <ol class="navList">
+            <li><i class="fa fa-list" aria-hidden="true"></i></li>
+            <li><i class="fa fa-bar-chart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-music" aria-hidden="true"></i></li>
+        </ol>
+
+        <div class="name">POMODORO</div>
+      </nav>
+    </div>
+  </body>
+</html>
