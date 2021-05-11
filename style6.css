@@ -1,0 +1,237 @@
+:root {
+    --blue: #00a7ff;
+    --lightBlue: #e5f3ff;
+    --darkBlue: #003164;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+.wrapper{
+    font-family: "Roboto", sans-serif;
+    display: block;
+    margin: 0 auto;
+    width: 935px;
+    height: 700px;
+    background-color: var(--darkBlue);
+
+    position: relative;
+    overflow: hidden;
+    padding: 55px 70px;
+    box-sizing: border-box;
+}
+
+/* 關閉按鈕 */
+.closeBtn{
+    position: absolute;
+    top: 75px;
+    right: 50px;
+}
+.closeBtn span{
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: relative;
+}
+.closeBtn span::before,.closeBtn span::after{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.closeBtn span::before{
+    transform: rotate(45deg);
+}
+.closeBtn span::after{
+    transform: rotate(-45deg);
+}
+
+/* PROMODORO 商標*/
+.name{
+    position: absolute;
+    right: -10px;
+    bottom: 130px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/* timer */
+.timer{
+    width: 315px;
+    height: 315px;
+    background-color: var(--lightBlue);
+    border-radius: 50%;
+    
+    position: absolute;
+    bottom: -157.5px;
+    left: 35px;
+}
+.counting{
+    /* outline: 1px solid red; */
+    position: relative;
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    text-align: center;
+}
+.circleBtn{
+    position: absolute;
+    top: -45px;
+    left: calc((315px - 105px)/2);
+    width: 105px;
+    height: 105px;
+    background-color: var(--darkBlue);
+    border-radius: 50%;
+}
+.circleOutline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 90px;
+    border:2px solid var(--blue);
+    border-radius: 50%;
+}
+.fa-play-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--blue);
+    border-radius: 50%;
+    font-size: 5.625rem;
+}
+.fa-play-circle::after{
+    /* 補icon 背景底部白色 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.num{
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: var(--blue);
+    padding-top: 65px;
+}
+.counting p{
+    color: var(--darkBlue);
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.main{
+    display: flex;
+}
+/* 第一列選單 */
+
+.nav li{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+
+    transition: all .6s;
+}
+.nav i{
+    margin-right: 8px;
+}
+.nav li:hover{
+    color: rgba(255, 255, 255);
+}
+.nav li:hover i{
+    color: var(--blue);
+}
+.--active p{
+    color: rgba(255, 255, 255);
+}
+.--active i{
+    color: var(--blue);
+}
+
+/* 第二列 */
+.rightSide_list{
+    margin-left: 175px;
+}
+
+/* 專注時間 */
+.work-time{
+    margin-bottom: 40px;
+}
+.work-time-title,.break-title{
+    display: flex;
+    width: 330px;
+    height: 30px;
+    background-color: #335a8393;
+    color:#fff;
+    padding: 0 10px;
+    line-height: 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.work-option,.break-option{
+    width: 330px;
+    margin-top: 20px;
+}
+.work-option ul,.break-option ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-option li,.break-option li{
+    display: flex;
+    align-items: center;
+    width: 110px;
+    margin-bottom: 10px;
+}
+.work-option p,.break-option p{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: .8rem;
+}
+
+.dot{
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+
+    position: relative;
+}
+.--checked{
+    border: 2px solid var(--blue);
+}
+
+.checked{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background-color: var(--blue);
+}
