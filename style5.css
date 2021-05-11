@@ -1,0 +1,286 @@
+:root {
+    --blue: #00a7ff;
+    --lightBlue: #e5f3ff;
+    --darkBlue: #003164;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+.wrapper{
+    font-family: "Roboto", sans-serif;
+    display: block;
+    margin: 0 auto;
+    width: 935px;
+    height: 700px;
+    background-color: var(--darkBlue);
+
+    position: relative;
+    overflow: hidden;
+    padding: 55px 70px;
+    box-sizing: border-box;
+}
+
+/* 關閉按鈕 */
+.closeBtn{
+    position: absolute;
+    top: 75px;
+    right: 50px;
+}
+.closeBtn span{
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: relative;
+}
+.closeBtn span::before,.closeBtn span::after{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.closeBtn span::before{
+    transform: rotate(45deg);
+}
+.closeBtn span::after{
+    transform: rotate(-45deg);
+}
+
+/* PROMODORO 商標*/
+.name{
+    position: absolute;
+    right: -10px;
+    bottom: 130px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/* timer */
+.timer{
+    width: 315px;
+    height: 315px;
+    background-color: var(--lightBlue);
+    border-radius: 50%;
+    
+    position: absolute;
+    bottom: -157.5px;
+    left: 35px;
+}
+.counting{
+    /* outline: 1px solid red; */
+    position: relative;
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    text-align: center;
+}
+.circleBtn{
+    position: absolute;
+    top: -45px;
+    left: calc((315px - 105px)/2);
+    width: 105px;
+    height: 105px;
+    background-color: var(--darkBlue);
+    border-radius: 50%;
+}
+.circleOutline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 90px;
+    border:2px solid var(--blue);
+    border-radius: 50%;
+}
+.fa-play-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--blue);
+    border-radius: 50%;
+    font-size: 5.625rem;
+}
+.fa-play-circle::after{
+    /* 補icon 背景底部白色 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.num{
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: var(--blue);
+    padding-top: 65px;
+}
+.counting p{
+    color: var(--darkBlue);
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.main{
+    display: flex;
+}
+/* 第一列選單 */
+
+.nav li{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+
+    transition: all .6s;
+}
+.nav i{
+    margin-right: 8px;
+}
+.nav li:hover{
+    color: rgba(255, 255, 255);
+}
+.nav li:hover i{
+    color: var(--blue);
+}
+.--active p{
+    color: rgba(255, 255, 255);
+}
+.--active i{
+    color: var(--blue);
+}
+
+/* 第二列 */
+.rightSide_list{
+    margin-left: 175px;
+}
+
+/* 專注時間 */
+.focus-time{
+    margin-bottom: 40px;
+}
+.focus-time-title,.chart-title{
+    display: flex;
+    width: 330px;
+    height: 30px;
+    background-color: #335a8393;
+    color:#fff;
+    padding: 0 10px;
+    line-height: 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.focus-data{
+    display: flex;
+    margin-top: 20px;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+.focus-data p{
+    margin-bottom: 8px;
+}
+.focus-data span{
+    display: block;
+    color: var(--blue);
+    font-size: 3.5rem;
+}
+.focus-data span::after{
+    content:" /TOMOTA";
+    font-size: .5rem;
+    color: #5c84af;
+}
+.period{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: .5rem;
+    margin-right: 20px;
+}
+
+/* chart */
+
+.chart-area{
+    /* outline: 1px solid red; */
+    width: 330px;
+    height: 220px;
+
+    position: relative;
+}
+.chart-data{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 300px;
+    height: 180px;
+    border-left: 1px solid #5c84af;
+    border-bottom: 1px solid #5c84af;
+
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(24,7.5px);
+    grid-column-gap: 15px;
+    padding:0px 15px;
+    box-sizing: border-box;
+}
+[class*="col"] {
+    background-color: #fff;
+    grid-row-start: 25;
+}
+.col-1{
+    grid-row-end: 9;
+}
+.col-2{
+    grid-row-end: 13;
+}
+.col-3{
+    grid-row-end: 9;
+}
+.col-4{
+    grid-row-end: 17;
+}
+.col-5{
+    grid-row-end: 13;
+}
+.col-6{
+    grid-row-end: 21;
+}
+.col-7{
+    grid-row-end: 5;
+    background-color: var(--blue);
+}
+.chart-data-num{
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.chart-data-num li{
+    margin-bottom: 17px;
+}
+.chart-data-date{
+    font-size: .8rem;
+    color:rgba(255, 255, 255, 0.7);
+    display: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.chart-data-date li{
+    margin-left: 20px;
+}
