@@ -147,17 +147,23 @@
     font-weight: bold;
     margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.5);
+    display: flex;
 
     transition: all .6s;
 }
 .nav i{
     margin-right: 8px;
 }
-
 .nav li:hover{
     color: rgba(255, 255, 255);
 }
 .nav li:hover i{
+    color: var(--blue);
+}
+.--active p{
+    color: rgba(255, 255, 255);
+}
+.--active i{
     color: var(--blue);
 }
 
@@ -219,7 +225,7 @@
     margin-bottom: 40px;
 }
 
-/* 代辦事項 */
+/* 待辦事項 */
 .item {
     display: flex;
 }
@@ -229,17 +235,17 @@
     border: 1px solid #fff;
     border-radius: 50%;
 }
-.to-do-list li {
+.to-do-list li,.done-list li{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     margin-top: 10px;
     border-bottom: 1px solid #d9e9f7;
 }
-.item {
+.item,.done-thing {
     display: flex;
 }
-.item p {
+.item p,.done-thing p {
     font-size: 0.8rem;
     font-weight: normal;
     line-height: 1.3rem;
@@ -256,4 +262,53 @@
     font-size: 15px;
     font-weight: 100;
     color: #fff;
+}
+
+/* 完成事項 */
+
+/* .done-thing{
+    display: flex;
+} */
+/* .done-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #d9e9f7;
+} */
+.done-thing p {
+    position: relative;
+    text-decoration: line-through;
+}
+/* .done-thing p::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #fff;
+} */
+.checked{
+    /* outline: 1px solid red; */
+    position: relative;
+    color: #fff;
+}
+.fa-check::before{
+    position: absolute;
+    top: -3px;
+    left: 0px;
+}
+.degree{
+    /* outline: 1px solid red; */
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: center;
+}
+.blackDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 5px;
 }
